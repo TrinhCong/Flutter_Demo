@@ -1,0 +1,18 @@
+package com.flutter_demo
+
+import io.flutter.app.FlutterApplication
+import io.flutter.plugin.common.PluginRegistry
+import io.flutter.plugin.common.PluginRegistry.PluginRegistrantCallback
+import io.flutter.plugins.GeneratedPluginRegistrant
+// import com.vietgis.notifier.NotifierService
+
+class Application : FlutterApplication(), PluginRegistrantCallback {
+    override fun onCreate() {
+        super.onCreate();
+        // NotifierService.setPluginRegistrant(this);
+    }
+
+    override fun registerWith(registry: PluginRegistry) {
+        GeneratedPluginRegistrant.registerWith(registry);
+    }
+}
